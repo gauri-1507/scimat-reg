@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #0c0b12;
+}
+
+html { color-scheme: dark; }
+body { background: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+
+/* Faint grid that fades out toward the edges */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, #000 30%, transparent 100%);
+}
+
+/* One load moment: the wordmark and form settle in together */
+@keyframes settle { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.settle { animation: settle .7s cubic-bezier(.2,.7,.2,1) both; }
+.settle-late { animation-delay: .12s; }
+
+@keyframes pop { from { opacity: 0; transform: scale(.97); } to { opacity: 1; transform: none; } }
+.pop { animation: pop .35s cubic-bezier(.2,.7,.2,1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .settle, .pop { animation: none; }
+  * { transition-duration: 0s !important; }
+}
