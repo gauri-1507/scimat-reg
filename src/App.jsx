@@ -152,7 +152,7 @@ export default function App() {
               <form onSubmit={onSubmit} noValidate>
                 <h2 id="form-title" className="font-display text-3xl font-bold tracking-tight">Register</h2>
                 <p className="mt-2 text-sm font-semibold text-violet-300">
-                  Registration Fee: ₹50
+                  Registration Fee: ₹50 
                 </p>
                 <p className="mb-7 mt-1.5 text-sm text-zinc-500">All fields are required.</p>
 
