@@ -182,8 +182,8 @@ export default function App() {
 
                 <figure className="my-6 overflow-hidden rounded-2xl border border-white/10 bg-white p-3">
                   <img
-                    src="/upi-payment-qr.png"
-                    alt="UPI payment QR code for Himank Jain"
+                    src="/upi-payment-qr.png?v=2"
+                    alt="UPI payment QR code for Gauri Pandey"
                     className="mx-auto w-full max-w-sm rounded-xl"
                   />
                   <figcaption className="px-2 pt-3 text-center text-sm text-zinc-600">
